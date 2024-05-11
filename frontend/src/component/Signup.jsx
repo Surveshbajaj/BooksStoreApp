@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import toast from "react-hot-toast";
 // import toast from "react-hot-toast";
 function Signup() {
   // const location = useLocation();
@@ -22,19 +23,26 @@ function Signup() {
     };
     console.log(userInfo);
     await axios
-      .post("http://localhost:4001/user/signup", userInfo)
+      .post("http://localhost:4000/user/signup", userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
-          // toast.success("Signup Successfully");
+      
+          toast.success("Signup Successfully");
+          // document.getElementById("my_modal_3").close();
+
+          setTimeout(() => {
+            window.location.href="/";
+            localStorage.setItem("Users", JSON.stringify(res.data.user));
+          }, 800);
           // navigate(from, { replace: true });
         }
-        // localStorage.setItem("Users", JSON.stringify(res.data.user));
+      localStorage.setItem("Users", JSON.stringify(res.data.user))
       })
       .catch((err) => {
         if (err.response) {
-          console.log(err);
-          // toast.error("Error: " + err.response.data.message);
+        
+          toast.error("Error: " + err.response.data.message);
         }
       });
   };
@@ -113,6 +121,7 @@ function Signup() {
                   <button
                     className="underline text-blue-500 cursor-pointer"
                     onClick={() =>
+                      
                       document.getElementById("my_modal_3").showModal()
                     }
                   >

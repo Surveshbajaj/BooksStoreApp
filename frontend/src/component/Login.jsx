@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 function Login() {
   const {
@@ -9,7 +11,36 @@ function Login() {
 
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    console.log(userInfo);
+    await axios
+      .post("http://localhost:4000/user/login", userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Login Successfully");
+          document.getElementById("my_modal_3").close();
+
+          setTimeout(() => {
+            window.location.reload();
+            localStorage.setItem("Users", JSON.stringify(res.data.user));
+          }, 1000);
+          // navigate(from, { replace: true });
+        }
+       
+      })
+      .catch((err) => {
+        if (err.response) {
+          // console.log(err);
+          toast.error("Error: " + err.response.data.message);
+        }
+      });
+  };
   return (
     <>
       <div>
@@ -18,12 +49,12 @@ function Login() {
             <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
               {/* if there is a button in form, it will close the modal */}
 
-              <Link
-                to={"/"}
+              <a
+                href="/"
                 className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
               >
                 ✕
-              </Link>
+              </a>
 
               <h3 className="font-bold text-lg">Login</h3>
               <div>

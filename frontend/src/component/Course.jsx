@@ -3,6 +3,7 @@ import Card from "./Card";
 import axios from "axios";
 import { Link } from "react-router-dom";
 // import { get } from "mongoose";s
+// import books from "../../public/data.json"
 
 function Course() {
   const [book, setBook] = useState([]);
@@ -51,4 +52,4 @@ function Course() {
 }
 
 export default Course;
-//vivek was here
+//vivek was here 

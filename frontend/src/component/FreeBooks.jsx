@@ -21,13 +21,13 @@ function FreeBooks() {
     }
     getBook();
   }, []);
-  const filterList = book.filter((data) => data.category == "free");
+  const filterList = book.filter((data) => data.price == "0");
   var settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {

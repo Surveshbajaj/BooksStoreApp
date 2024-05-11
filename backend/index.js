@@ -31,7 +31,7 @@ try {
 app.use(cors())
 
 //parser
-app.use(express.urlencoded({extended: true}))
+app.use(express.json());
 
 
 app.use('/user', userRoute)

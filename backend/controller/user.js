@@ -21,7 +21,11 @@ module.exports.signupController = async (req, res) => {
       password: hashPassword,
     });
     await newUser.save();
-    res.status(200).json({ msg: "User created successfully" });
+    res.status(200).json({ msg: "User created successfully" , user:{
+      id : newUser._id,
+      fullname: newUser.fullname,
+      email:newUser.email
+    }});
   } catch (error) {
     console.log("Error:", error);
     return res.status(500).json({ msg: "Server error" });
@@ -42,7 +46,13 @@ module.exports.loginController = async (req, res) => {
     if (!isValidPassword) {
       return res.status(401).json({ msg: "Invalid Email or password" });
     }
-    res.status(200).json({ msg: "Login Successfully" });
+    res.status(200).json({ msg: "Login Successfully" ,  user:{
+      id : user._id,
+      fullname: user.fullname,
+      email: user.email,
+
+
+    } });
   } catch (error) {
     console.log("Error:", error);
     return res.status(500).json({ msg: "Internal Server Error" });

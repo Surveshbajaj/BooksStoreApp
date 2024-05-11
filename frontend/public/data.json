@@ -1,0 +1,108 @@
+[
+    {
+      "title": "Free E-Book: The Art of Cooking",
+      "description": "Discover the secrets of cooking with this comprehensive e-book.",
+      "category": "Books",
+      "price": 0,
+      "image": "https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?size=626&ext=jpg&ga=GA1.1.932335009.1689601881&semt=sph"
+    },
+    {
+      "title": "Learn Spanish Online",
+      "description": "Master Spanish with our interactive online course.",
+      "category": "Language Learning",
+      "price": 29.99,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Yoga for Beginners",
+      "description": "Start your yoga journey with our beginner-friendly course.",
+      "category": "Fitness",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Healthy Recipes App",
+      "description": "Get access to thousands of healthy recipes with our app.",
+      "category": "Food & Drink",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Beginner's Guide to Meditation",
+      "description": "Learn the basics of meditation and mindfulness.",
+      "category": "Health & Wellness",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Graphic Design Masterclass",
+      "description": "Unlock your creativity with our graphic design course.",
+      "category": "Design",
+      "price": 49.99,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Introduction to Programming",
+      "description": "Learn the fundamentals of programming with Python.",
+      "category": "Technology",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Travel Photography Guide",
+      "description": "Capture stunning travel photographs with our guide.",
+      "category": "Photography",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Gardening Tips and Tricks",
+      "description": "Grow your own garden with our expert gardening tips.",
+      "category": "Home & Garden",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Financial Planning Workshop",
+      "description": "Plan your financial future with our expert workshop.",
+      "category": "Finance",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "DIY Home Decor Ideas",
+      "description": "Decorate your home with these creative DIY ideas.",
+      "category": "Home & Garden",
+      "price": 12.99,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Mobile App Development Course",
+      "description": "Build your own mobile apps with our comprehensive course.",
+      "category": "Technology",
+      "price": 59.99,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Personal Finance Management App",
+      "description": "Take control of your finances with our easy-to-use app.",
+      "category": "Finance",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Self-Care Workbook",
+      "description": "Prioritize self-care with our interactive workbook.",
+      "category": "Health & Wellness",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    },
+    {
+      "title": "Classic Literature Collection",
+      "description": "Explore the world of classic literature with our collection.",
+      "category": "Books",
+      "price": 0,
+      "image": "https://via.placeholder.com/300"
+    }
+  ]
+  
